@@ -15,6 +15,7 @@ class DisplayFav extends StatefulWidget {
 
 class _DisplayFavState extends State<DisplayFav> {
   late QuerySnapshot collection1;
+
   int j=0,i=0;
   int w=0,z=0;
   Map map1=new Map();
@@ -22,6 +23,7 @@ class _DisplayFavState extends State<DisplayFav> {
   //late int length;
   getDep()async{
     collection1=await FirebaseFirestore.instance.collection("Users").where("Username",isEqualTo: widget.uid).get();
+    print("Hello");
     return collection1;
 
      //for(String i in array1)
